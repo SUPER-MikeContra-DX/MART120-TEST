@@ -1,0 +1,39 @@
+span.bluecolor{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: white;
+}
+span.yellowcolor{
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: black;
+}
+span.greencolor{
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    background-color: white;
+}
+#restrauntlinks{
+    color: chartreuse;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+    font-size: xx-large;
+    text-decoration: none;
+}
+#websitelinks{
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+    font-size: xx-large;
+    text-decoration: none;
+}
+#backgroundimage{
+    background-color: blue;
+    background-image: url(spooky.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
