@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>CONTACT ME</title>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width,
+          initial-scale=1">
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         <script>
+            function getData()
+            {
+                var firstName = document.getElementById("txtfname").value;
+                if(firstName == "")
+                {
+                    document.getElementById("txtfname").style.backgroundColor = "red"
+                    document.getElementById("txtfname").focus();
+                }
+                var lastname = document.getElementById("txtlname").value;
+                if(lastname == "") 
+                {
+                    document.getElementById("txtlname").style.backgroundColor = "red"
+                    document.getElementById("txtlname").focus();
+                }
+                var emailName = document.getElementById("txtemail").value;
+                if(emailName == "")
+                {
+                    document.getElementById("txtemail").style.backgroundColor = "red"
+                    document.getElementById("txtemail").focus();
+                }
+                var Chkbox = document.getElementById("checkbox").value;
+                if(Chkbox == "yes")
+                {
+                    window.alert( "Thank you for accepting terms" );
+                }
+                else
+                {
+                    window.alert( "you must type yes to accept the terms" )
+                    document.getElementById("checkbox").style.backgroundColor = "red"
+                    document.getElementById("checkbox").focus();
+                }
+            
+            }
+         </script>
+    </head>
+    <body>
+        <h1>Contact Me</h1>
+        <table>
+    <tr>
+      <td>First Name</td>
+      <td><input type="text" id="txtfname"></td>
+    </tr>
+    <tr>
+      <td>Last Name</td>
+      <td><input type="text" id="txtlname"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><input type="text" id="txtemail"></td>
+    </tr>
+    <tr>
+        <td>
+        Accept Terms (yes/no)    
+        </td>
+        <td>
+            <input type="text" id="checkbox" >
+        </td>
+    </tr>
+    <tr>
+      <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
+    </tr>
+  </table>
+<br/>
+<br/>
+<h4>Other Cool Things by Mike Contra</h4>
+            <a href="TheMikeContraFanPage.html">HOME</a>
+            <a href="Page2.html">SHORT EPIC STORY</a>
+    </body>
+</html>
