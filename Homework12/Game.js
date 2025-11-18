@@ -31,58 +31,12 @@ function draw()
   createBorders(10);
   drawCharcter();
   charcterMovement();
-  fill(27,51,43);
-  circle(obstacle1X,obstacle1Y,10);
-  circle(obstacle2X,obstacle2Y,10);
-  obstacle1X += obstacle1xspeed
-  obstacle1Y += obstacle1yspeed
-  obstacle2X += obstacle2xspeed
-  obstacle2Y += obstacle2yspeed
-  if(obstacle1X > width)
-  {
-    obstacle1X = 0;
-  }
-  if(obstacle1X < 0)
-  {
-    obstacle1X = width;
-  }
-  if(obstacle1Y > height)
-  {
-    obstacle1Y = 0;
-  }
-  if(obstacle1Y < 0)
-  {
-    obstacle1Y = height;
-  }
-  if(obstacle2X > width)
-  {
-    obstacle2X = 0;
-  }
-  if(obstacle2X < 0)
-  {
-    obstacle2X = width;
-  }
-  if(obstacle2Y > height)
-  {
-    obstacle2Y = 0;
-  }
-  if(obstacle2Y < 0)
-  {
-    obstacle2Y = height;
-  }
-  textSize(20);
-  fill(0);
-  text("exit", width-60,height-50);
-  if(Playerx > width && Playery > width-50)
-    {
-        fill(0);
-        stroke(5);
-        textSize(26);
-        text("You Win!", width/2-50, height/2-50);
-    }
-  fill(13,13,13);
-  circle(mouseshapex,mouseshapey,50)
- 
+  drawObstacle();
+  obstacleMovement1();
+  obstacleMovement2();
+  drawExit();
+  youWin();
+  drawMouseclick();
 }
 
 function charcterMovement()
@@ -126,8 +80,84 @@ function createBorders(thickness)
   rect(width-thickness,0,thickness,height-50);
 }
 
+function drawObstacle()
+{
+  fill(27,51,43);
+  circle(obstacle1X,obstacle1Y,10);
+  circle(obstacle2X,obstacle2Y,15);
+}
+
+function obstacleMovement2()
+{
+  obstacle2X += obstacle2xspeed
+  obstacle2Y += obstacle2yspeed
+  if(obstacle2X > width)
+  {
+    obstacle2X = 0;
+  }
+  if(obstacle2X < 0)
+  {
+    obstacle2X = width;
+  }
+  if(obstacle2Y > height)
+  {
+    obstacle2Y = 0;
+  }
+  if(obstacle2Y < 0)
+  {
+    obstacle2Y = height;
+  }
+}
+
+function obstacleMovement1()
+{
+ obstacle1X += obstacle1xspeed
+  obstacle1Y += obstacle1yspeed
+  if(obstacle1X > width)
+  {
+    obstacle1X = 0;
+  }
+  if(obstacle1X < 0)
+  {
+    obstacle1X = width;
+  }
+  if(obstacle1Y > height)
+  {
+    obstacle1Y = 0;
+  }
+  if(obstacle1Y < 0)
+  {
+    obstacle1Y = height;
+  }
+}
+
+
+function drawExit()
+{
+  textSize(20);
+  fill(0);
+  text("exit", width-60,height-50);
+}
+
+function youWin()
+{
+  if(Playerx > width && Playery > width-50)
+    {
+        fill(0);
+        stroke(5);
+        textSize(26);
+        text("You Win!", width/2-50, height/2-50);
+    }
+}
+
+function drawMouseclick()
+{
+  fill(13,13,13);
+  circle(mouseshapex,mouseshapey,50)
+}
+
 function mouseClicked()
   {
-    mouseshapex = mouseX;
-    mouseshapey = mouseY;
+  mouseshapex = mouseX;
+  mouseshapey = mouseY;
   }
